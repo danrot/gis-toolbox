@@ -2,9 +2,6 @@ package at.fhv.gis.shapes;
 
 import java.util.List;
 
-/**
- * Created by daniel on 14.11.2014.
- */
 public class Rectangle
 {
     private Point x;
@@ -59,6 +56,6 @@ public class Rectangle
             }
         }
 
-        return new Rectangle(new Point(minX, minY), new Point(maxX, maxY));
+        return new Rectangle(new Point(minX, minY, null), new Point(maxX, maxY, null));
     }
 }

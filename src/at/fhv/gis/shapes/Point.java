@@ -1,16 +1,22 @@
 package at.fhv.gis.shapes;
 
-/**
- * Created by daniel on 14.11.2014.
- */
+import java.util.Date;
+
 public class Point {
     private double latitude;
 
     private double longitude;
 
+    private Date time;
+
     public Point(double latitude, double longitude) {
+        this(latitude, longitude, null);
+    }
+
+    public Point(double latitude, double longitude, Date time) {
         this.latitude = latitude;
         this.longitude = longitude;
+        this.time = time;
     }
 
     public double getLatitude() {
