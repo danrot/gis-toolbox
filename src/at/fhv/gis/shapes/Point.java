@@ -35,6 +35,14 @@ public class Point {
         this.longitude = longitude;
     }
 
+    public Date getTime() {
+        return time;
+    }
+
+    public void setTime(Date time) {
+        this.time = time;
+    }
+
     public double distanceTo(Point point)
     {
         double latitude1 = Math.toRadians(this.latitude);

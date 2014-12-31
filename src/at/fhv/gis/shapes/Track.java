@@ -20,4 +20,12 @@ public class Track
 
         return length;
     }
+
+    public double getSpeed()
+    {
+        double length = getLength();
+        double time = (double)(points.get(points.size() - 1).getTime().getTime() - points.get(0).getTime().getTime()) / 1000;
+
+        return length / time;
+    }
 }
