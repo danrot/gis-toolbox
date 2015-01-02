@@ -22,6 +22,11 @@ public class Track
         this.points.add(point);
     }
 
+    public void merge(Track track)
+    {
+        this.points.addAll(track.points);
+    }
+
     public double getLength()
     {
         double length = 0;
@@ -38,5 +43,15 @@ public class Track
         double time = (double)(points.get(points.size() - 1).getTime().getTime() - points.get(0).getTime().getTime()) / 1000;
 
         return length / time;
+    }
+
+    public Point getStart()
+    {
+        return points.get(0);
+    }
+
+    public Point getEnd()
+    {
+        return points.get(points.size() - 1);
     }
 }
