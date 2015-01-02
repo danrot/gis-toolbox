@@ -1,14 +1,25 @@
 package at.fhv.gis.shapes;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Track
 {
     private List<Point> points;
 
+    public Track()
+    {
+        this(new ArrayList<Point>());
+    }
+
     public Track(List<Point> points)
     {
         this.points = points;
+    }
+
+    public void addPoint(Point point)
+    {
+        this.points.add(point);
     }
 
     public double getLength()
